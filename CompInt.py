@@ -19,6 +19,9 @@ principal = int(input("Enter the principal amount: "))
 rate = float(input("Enter the annual interest rate (in decimal): "))
 time = int(input("Enter the time in years: "))
 total_amount = compound_interest(principal, rate, time)
+for x in range(1, time + 1):
+    yearly_amount = compound_interest(principal, rate, x)
+    print(f"Amount after year {x}: {yearly_amount:.2f}")
 print(f"The total amount after {time} years is: {total_amount:.2f}")
 
 def investment_double_time(principal, rate):
